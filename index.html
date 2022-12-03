@@ -12,8 +12,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3321522449025796"
-     crossorigin="anonymous"></script>
+    
+    <script>
+      function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+      }
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+      </script>
 </head>
 <body>
     <style>
@@ -81,30 +97,11 @@
         }  
         
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3321522449025796"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-5y+c5-3k-b8+1cu"
-     data-ad-client="ca-pub-3321522449025796"
-     data-ad-slot="2635330299"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
     
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3321522449025796"
-     crossorigin="anonymous"></script>
-<!-- Ad_History Wala -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3321522449025796"
-     data-ad-slot="9360520743"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>   
+     <table>
+  <tr><td>Current Local Time:</td><td><div id="txt"</div></tr><td></td>
+  </div>
+  </table>
     
     <script type = "text/javascript">
       
